@@ -1,0 +1,27 @@
+<html>
+<body>
+<script>
+var fib1 = 0, fib2 = 1, fib;
+var num = prompt('Enter the number: ');
+
+if (num > 0 && num != null) {
+    document.write("The first " + num + " Fibonacci numbers: ");
+
+    if (num >= 1) 
+        document.write(fib1 + " <br>");
+    
+    if (num >= 2) 
+        document.write(fib2 + " <br>");
+    
+    for (var i = 3; i <= num; i++) {
+        fib = fib1 + fib2;
+        document.write(fib + " <br>");
+        fib1 = fib2;
+        fib2 = fib;
+    }
+} else {
+    document.write("Invalid input");
+}
+</script>
+</body>
+</html>
